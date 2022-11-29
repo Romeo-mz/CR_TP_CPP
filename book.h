@@ -6,13 +6,13 @@
 class Book {
     public: 
         Book(std::string title, std::string author, std::string language, std::string type, Date d, std::string ISBN);
-        std::string bookTitle();
-        std::string bookAuthor();
-        std::string bookLanguage();
-        std::string bookType();
+        std::string bookTitle() const;
+        std::string bookAuthor() const;
+        std::string bookLanguage() const;
+        std::string bookType() const;
         //bookDate;
-        std::string bookISBN();
-        void bookInfo();
+        std::string bookISBN() const;
+        void bookInfo() const;
 
     private:
         std::string _title;
