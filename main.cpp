@@ -2,6 +2,7 @@
 
 #include "date.h"
 #include "reader.h"
+#include "borrow.h"
 
 int main()
 {
@@ -10,6 +11,9 @@ int main()
 
     Reader Bob("Jean", "Cule", 1);
     Bob.printReader();
+
+    Borrow emprunt(Bob,test);
+    emprunt.printBorrow(Bob);
 
     return 0;
 }
