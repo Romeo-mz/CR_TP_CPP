@@ -1,7 +1,7 @@
 #include <iostream>
 
 #include "date.h"
-#include "Reader.h"
+#include "reader.h"
 
 int main()
 {

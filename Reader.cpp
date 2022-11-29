@@ -1,4 +1,4 @@
-#include "Reader.h"
+#include "reader.h"
 #include <iostream>
 
 Reader::Reader(const std::string name, const std::string surname, const int id): _name(name), _surname(surname), _id(id)
