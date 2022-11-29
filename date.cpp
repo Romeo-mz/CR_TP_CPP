@@ -84,7 +84,6 @@ bool isDate(int month, int day, int year) {
     if (((month == 4) || (month == 6) || 
         (month == 9) || (month == 11)) && (day > 30)) return false;
     
-    if(year < 1999) return false;
     return true;
 }
 

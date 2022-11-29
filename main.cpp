@@ -2,6 +2,7 @@
 
 #include "date.h"
 #include "reader.h"
+#include "book.h"
 #include "borrow.h"
 
 int main()
