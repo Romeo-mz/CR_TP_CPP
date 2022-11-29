@@ -2,14 +2,17 @@
 
 #include "date.h"
 #include "reader.h"
+#include "book.h"
 
 int main()
 {
-    Date test(5,10,2025);
-    std::cout << "date : " << toString(test) << std::endl;
+    Date d1(12, 25, 2020);
+    Reader r1("Adil", "Amoura", 1);
+    Book b1("Little Christmas Tale", "Inconnu", "Français", "Enfant", d1, "10000");
 
-    Reader Bob("Jean", "Cule", 1);
-    Bob.printReader();
+    b1.bookInfo();
+    r1.printReader();
+    
 
     return 0;
 }

@@ -28,5 +28,5 @@ std::string Book::bookISBN(){
 }
 
 void Book::bookInfo(){
-    std::cout << _title << ", " << _author << "; Langue: " << _language << "; Genre: " << _type << "; ISBN: " << _ISBN << ". \n";
+    std::cout << _title << ", de " << _author << "; Language: " << _language << "; Type: " << _type << "; ISBN: " << _ISBN << ". \n";
 }
