@@ -4,8 +4,9 @@
 
 
 
-Date::Date(int month, int day) : _month(month), _day(day) {
-    bool status = isDate(month, day);
+Date::Date(int month, int day, int year) : _month(month), _day(day), _year(year)
+{
+    bool status = isDate(month, day, year);
     assert(status && "Date is not valid");
 }
 
@@ -17,22 +18,34 @@ int Date::day() const {
 	return _day;
 }
 
+int Date::year() const
+{
+    return _year;
+}
+
 void Date::updateMonth(int month) {
-    bool status = isDate(month, _day);
+    bool status = isDate(month, _day, _year);
     assert(status==true && "New month is not valid");
     _month = month;
 }
 
 void Date::updateDay(int day) {
-    bool status = isDate(_month, day);
+    bool status = isDate(_month, day, _year);
     assert(status==true && "New day is not valid");
     _day = day;
 }
 
+void Date::updateYear(int year)
+{
+    bool status = isDate(_month, _day, year);
+    assert(status==true && "New year is not valid");
+    _year = year;
+}
 void Date::next() {
     if ((_month==12) && (_day==31)) {
         _day=1;
         _month=1;
+        ++_year;
     }
     else if (_day==getDaysInMonth(_month)) {
         _day=1;
@@ -47,6 +60,7 @@ void Date::back() {
     if ((_month==1) && (_day==1)) {
         _day=31;
         _month=12;
+        --_year;
     }
     else if (_day==1) {
         _month--;
@@ -63,12 +77,14 @@ void Date::back() {
  * 
 */
 
-bool isDate(int month, int day) {
+bool isDate(int month, int day, int year) {
     if ((day < 1) || (day>31)) return false;
     if ((month <1) || (month>12)) return false;
     if ((month == 2) && (day > 28)) return false;
     if (((month == 4) || (month == 6) || 
         (month == 9) || (month == 11)) && (day > 30)) return false;
+    
+    if(year < 1999) return false;
     return true;
 }
 
@@ -90,5 +106,5 @@ int dayOfYear(Date d) {
 }
 
 std::string toString(Date d) {
-    return std::to_string(d.day()) + "/" + std::to_string(d.month()) ;
+    return std::to_string(d.day()) + "/" + std::to_string(d.month()) + "/" + std::to_string(d.year()) ;
 }

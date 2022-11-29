@@ -4,8 +4,8 @@
 
 int main()
 {
-    Date test(5,10);
-    std::cout << "a day: " << toString(test) << std::endl;
+    Date test(5,10,2025);
+    std::cout << "date : " << toString(test) << std::endl;
 
     return 0;
 }
