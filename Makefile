@@ -1,10 +1,10 @@
 # Makefile with dependencies management (Q4)
 
 CXX        = g++
-CXXFLAGS   = -Wall -Wextra -std=c++11
+CXXFLAGS   = -Wall -Wextra 
 DEPFLAGS   = -MMD
 LDFLAGS    =
-SRCS       = date.cpp main.cpp book.cpp reader.cpp author.cpp
+SRCS       = date.cpp main.cpp book.cpp reader.cpp author.cpp borrow.cpp
 OBJS       = $(SRCS:.cpp=.o)
 TARGET     = MyBiblio
 DEPS	   = $(OBJS:.o=.d)
