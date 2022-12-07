@@ -81,7 +81,7 @@ void Date::back() {
 }
 
 //Helper permettant de vérifier la validité de la date
-bool isDate(int month, int day, int year) {
+bool isDate(int month, int day) {
     if ((day < 1) || (day>31)) return false;
     if ((month <1) || (month>12)) return false;
     if ((month == 2) && (day > 28)) return false;
