@@ -6,7 +6,7 @@
 class Book {
     public: 
         Book(std::string title = "Title", std::string author = "Author", std::string language = "Language", std::string type = "Type", 
-        Date d = Date(), std::string ISBN = "0000");
+        Date d = Date(), std::string ISBN = "0000", bool isBorrowed = false);
         std::string getTitle() const;
         std::string getAuthor() const;
         std::string getLanguage() const;
@@ -15,6 +15,9 @@ class Book {
         std::string getISBN() const;
         void bookInfo() const;
 
+        void setIsBorrowed(bool state);
+        bool getIsBorrowed() const;
+        
     private:
         std::string _title;
         std::string _author;
@@ -22,7 +25,7 @@ class Book {
         std::string _type;
         Date _d;
         std::string _ISBN;
-        
+        bool _isBorrowed;
 };
 
 std::string bookDisplay(Book b);

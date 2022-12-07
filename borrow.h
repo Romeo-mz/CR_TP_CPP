@@ -9,16 +9,16 @@ class Borrow
 {
     public:
 
-    Borrow(const Reader& reader, const Book& book, const Date& date);
+    Borrow(const Reader& reader, Book& book, Date date = Date());
     
     void addReader();
-    void addBook();
+    void addBook(Book& book);
 
-    void returnBook();
+    void returnBook(Book& book);
     
     void printBorrow(const Reader& reader);
 
-    bool isBorrow(const Book& book);
+    bool isBorrow(Book& book);
 
     private:
 
@@ -29,7 +29,7 @@ class Borrow
     int _index = -1;
     std::vector <int> _idList;
     std::vector <std::string> _isbnList;
-    std::vector <std::string> _borrowList;
+    
 };
 
 

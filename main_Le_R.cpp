@@ -7,27 +7,29 @@
 
 int main()
 {
-    Date test(5,10,2025);
+    Date test(2025,10,5);
     std::cout << "date : " << toString(test) << std::endl;
 
     Reader Jhonny("Jhonny", "Halliday", 1);
     Jhonny.printReader();
     Book Asterix("Asterix","Auteur", "FR", "aventure", test, "150");
     Borrow emprunt(Jhonny, Asterix, test);
+    emprunt.printBorrow(Jhonny);
 
+    std::cout << Asterix.getIsBorrowed() << std::endl;
 
     Reader Jul("Julien", "Marie", 2);
-    Book Tintin("Tintin","Auteur", "FR", "aventure", test, "180");
+    Book Tintin("Tintin","Auteur", "FR", "aventure", test, "180", false); 
     Borrow emprunt2(Jul, Tintin, test);
+
+    emprunt2.printBorrow(Jul);
 
     Reader Bob("Bob", "Bob", 3);
     Borrow emprunt3(Bob, Tintin, test);
-
-   
-    emprunt2.printBorrow(Jul);
+    
     emprunt3.printBorrow(Bob);
 
-    emprunt.printBorrow(Jhonny);
+    
     
     return 0;
 }
