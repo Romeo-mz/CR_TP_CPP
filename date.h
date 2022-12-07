@@ -5,7 +5,7 @@
 
 class Date {
 public:
-   Date(int month=1, int day=1, int year = 2000);
+   Date(int year = 2000, int month=1, int day=1);
    int month() const;
    int day() const;
    int year() const;
@@ -22,7 +22,7 @@ private:
    
 };
 
-bool isDate(int month, int day, int);
+bool isDate(int month, int day);
 int getDaysInMonth(int month);
 int dayOfYear(Date d);
 std::string toString(Date d);

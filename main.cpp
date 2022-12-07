@@ -7,14 +7,10 @@
 
 int main()
 {
-    Date test(5,10,2025);
-    std::cout << "date : " << toString(test) << std::endl;
+    Date test(2025,5,10);
 
-    Reader Bob("Jean", "Cule", 1);
-    Bob.printReader();
-
-    Borrow emprunt(Bob,test);
-    emprunt.printBorrow(Bob);
+    Book b1("Pokémon", "Moi", "FR", "Adventure", test, "1000");
+    bookDisplay(b1);
 
     return 0;
 }
