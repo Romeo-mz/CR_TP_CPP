@@ -8,8 +8,13 @@
 int main()
 {
     Date test(2025,5,10);
+    Date birth(2002,11,12);
+    Author a(10, "Adil", "Amoura", birth);
+    std::cout << authorInfo(a);
+    std::cout << "\n";
 
-    Book b1("Pokémon", "Moi", "FR", "Adventure", test, "1000");
+    Book b1("Pokémon", a, "FR", "Adventure", test, "1000");
+    b1.getDate();
     bookDisplay(b1);
 
     return 0;

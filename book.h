@@ -2,10 +2,11 @@
 #include <string>
 #include <vector>
 #include "date.h"
+#include "author.h"
 
 class Book {
     public: 
-        Book(std::string title = "Title", std::string author = "Author", std::string language = "Language", std::string type = "Type", 
+        Book(std::string title = "Title", Author a = Author(), std::string language = "Language", std::string type = "Type", 
         Date d = Date(), std::string ISBN = "0000", bool isBorrowed = false);
         std::string getTitle() const;
         std::string getAuthor() const;
@@ -20,7 +21,7 @@ class Book {
         
     private:
         std::string _title;
-        std::string _author;
+        Author _a;
         std::string _language;
         std::string _type;
         Date _d;
@@ -28,4 +29,4 @@ class Book {
         bool _isBorrowed;
 };
 
-std::string bookDisplay(Book b);
+void bookDisplay(Book b);
