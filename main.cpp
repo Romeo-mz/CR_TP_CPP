@@ -3,19 +3,18 @@
 #include "date.h"
 #include "reader.h"
 #include "book.h"
+#include "borrow.h"
 
 int main()
 {
-    Date d1(12, 25, 2020);
-    Reader r1("Adil", "Amoura", 1);
-    Book b1("Little Christmas Tale", "Inconnu", "Français", "Enfant", d1, "10000");
+    Date test(5,10,2025);
+    std::cout << "date : " << toString(test) << std::endl;
 
-    b1.bookInfo();
-    r1.printReader();
+    Reader Bob("Jean", "Cule", 1);
+    Bob.printReader();
 
-    std::cout << "\n";
-    r1.updateName("Adila");
-    r1.updateSurname("Moura");
-    r1.printReader();
+    Borrow emprunt(Bob,test);
+    emprunt.printBorrow(Bob);
+
     return 0;
 }
