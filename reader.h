@@ -5,13 +5,15 @@
 class Reader
 {
     public:
-    Reader(const std::string name = "Name", 
-    const std::string surname = "Surname", 
+    Reader(std::string name = "Name", 
+    std::string surname = "Surname", 
     const int id = 0);
 
     int getId() const;
     std::string getSurname() const;
     std::string getName() const;
+    void updateName(std::string name);
+    void updateSurname(std::string surname);
 
 
     void printReader() const;

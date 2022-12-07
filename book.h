@@ -5,12 +5,12 @@
 
 class Book {
     public: 
-        Book(std::string title, std::string author, std::string language, std::string type, Date d, std::string ISBN);
+        Book(std::string title = "Title", std::string author = "Author", std::string language = "Language", std::string type = "Type", 
+        Date d = Date(), std::string ISBN = "0000");
         std::string bookTitle() const;
         std::string bookAuthor() const;
         std::string bookLanguage() const;
         std::string bookType() const;
-        //bookDate;
         std::string bookISBN() const;
         void bookInfo() const;
 

@@ -12,7 +12,10 @@ int main()
 
     b1.bookInfo();
     r1.printReader();
-    
 
+    std::cout << "\n";
+    r1.updateName("Adila");
+    r1.updateSurname("Moura");
+    r1.printReader();
     return 0;
 }
