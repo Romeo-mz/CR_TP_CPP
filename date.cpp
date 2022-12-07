@@ -3,10 +3,10 @@
 #include <string>
 
 
-
-Date::Date(int month, int day, int year) : _month(month), _day(day), _year(year)
+//Constructeur
+Date::Date(int year, int month, int day) : _year(year), _month(month), _day(day)
 {
-    bool status = isDate(month, day, year);
+    bool status = isDate(month, day);
     assert(status && "Date is not valid");
 }
 
@@ -28,14 +28,14 @@ int Date::year() const
 
 //Méthode permettant de modifier le mois de la date
 void Date::updateMonth(int month) {
-    bool status = isDate(month, _day, _year);
+    bool status = isDate(month, _day);
     assert(status==true && "New month is not valid");
     _month = month;
 }
 
 //Méthode permettant de modifier le jour de la date
 void Date::updateDay(int day) {
-    bool status = isDate(_month, day, _year);
+    bool status = isDate(_month, day);
     assert(status==true && "New day is not valid");
     _day = day;
 }
@@ -43,8 +43,6 @@ void Date::updateDay(int day) {
 //Méthode permettant de modifier l'année de la date
 void Date::updateYear(int year)
 {
-    bool status = isDate(_month, _day, year);
-    assert(status==true && "New year is not valid");
     _year = year;
 }
 
@@ -112,5 +110,5 @@ int dayOfYear(Date d) {
 
 //Helper permetteant d'afficher la date
 std::string toString(Date d) {
-    return std::to_string(d.day()) + "/" + std::to_string(d.month()) + "/" + std::to_string(d.year()) ;
+    return std::to_string(d.year()) + "/" + std::to_string(d.month()) + "/" + std::to_string(d.day()) ;
 }

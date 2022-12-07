@@ -5,7 +5,7 @@
 
 class Date {
 public:
-   Date(int month=1, int day=1, int year = 2000);
+   Date(int year = 2000, int month=1, int day=1);
    int month() const;
    int day() const;
    int year() const;

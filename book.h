@@ -7,11 +7,12 @@ class Book {
     public: 
         Book(std::string title = "Title", std::string author = "Author", std::string language = "Language", std::string type = "Type", 
         Date d = Date(), std::string ISBN = "0000");
-        std::string bookTitle() const;
-        std::string bookAuthor() const;
-        std::string bookLanguage() const;
-        std::string bookType() const;
-        std::string bookISBN() const;
+        std::string getTitle() const;
+        std::string getAuthor() const;
+        std::string getLanguage() const;
+        std::string getType() const;
+        std::string getDate() const;
+        std::string getISBN() const;
         void bookInfo() const;
 
     private:
@@ -23,3 +24,5 @@ class Book {
         std::string _ISBN;
         
 };
+
+std::string bookDisplay(Book b);
