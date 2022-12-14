@@ -9,11 +9,12 @@
 int main()
 {
     Date test(2025,10,5);
-    std::cout << "date : " << toString(test) << std::endl;
+    //std::cout << "date : " << toString(test) << std::endl;
     Author a(1, "Tintin", "Tintin", test);
 
     Reader Jhonny("Jhonny", "Halliday", 1);
-    Jhonny.printReader();
+    std::cout << Jhonny << std::endl;
+
     Book Asterix("Asterix",a, "FR", "aventure", test, "150");
     Borrow emprunt(Jhonny, Asterix, test);
     emprunt.printBorrow(Jhonny);
@@ -24,14 +25,8 @@ int main()
     Book Tintin("Tintin",a, "FR", "aventure", test, "180", false); 
     Borrow emprunt2(Jul, Tintin, test);
 
-    emprunt2.printBorrow(Jul);
+    std::cout << Tintin << std::endl;
 
-    Reader Bob("Bob", "Bob", 3);
-    Borrow emprunt3(Bob, Tintin, test);
-    
-    emprunt3.printBorrow(Bob);
-
-    
     
     return 0;
 }*/

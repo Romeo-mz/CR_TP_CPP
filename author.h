@@ -18,6 +18,7 @@ class Author {
         std::string _name;
         std::string _surname;
         Date _d;
+        friend std::ostream& operator<< (std::ostream& os, Author const& author);
 
 };
 

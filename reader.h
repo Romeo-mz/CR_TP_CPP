@@ -17,12 +17,15 @@ class Reader
 
 
     void printReader() const;
+
     private:
     
     std::string _name;
     std::string _surname;
     
     int _id;
+
+    friend std::ostream& operator<< (std::ostream& os, Reader const& reader);
 };
 
 #endif

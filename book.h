@@ -27,6 +27,8 @@ class Book {
         Date _d;
         std::string _ISBN;
         bool _isBorrowed;
+
+        friend std::ostream& operator<< (std::ostream& os, Book const& book);
 };
 
 void bookDisplay(Book b);

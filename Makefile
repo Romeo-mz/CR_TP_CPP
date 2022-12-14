@@ -6,7 +6,7 @@ DEPFLAGS   = -MMD
 LDFLAGS    =
 SRCS       = date.cpp main.cpp book.cpp reader.cpp author.cpp borrow.cpp biblio.cpp
 OBJS       = $(SRCS:.cpp=.o)
-TARGET     = MyBiblio
+TARGET     = app
 DEPS	   = $(OBJS:.o=.d)
 
 all: $(TARGET)
