@@ -4,9 +4,9 @@ CXX        = g++
 CXXFLAGS   = -Wall -Wextra 
 DEPFLAGS   = -MMD
 LDFLAGS    =
-SRCS       = date.cpp main.cpp book.cpp reader.cpp author.cpp borrow.cpp
+SRCS       = date.cpp main_Le_R.cpp book.cpp reader.cpp author.cpp borrow.cpp
 OBJS       = $(SRCS:.cpp=.o)
-TARGET     = MyBiblio
+TARGET     = app
 DEPS	   = $(OBJS:.o=.d)
 
 all: $(TARGET)

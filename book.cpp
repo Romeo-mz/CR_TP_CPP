@@ -58,3 +58,24 @@ void bookDisplay(Book b){
     << b.getDate() << "; Language: " << b.getLanguage() << "; Type: " << b.getType() << "; ISBN: " 
     << b.getISBN() << ". \n";
 }
+
+std::ostream& operator<< (std::ostream& os, Book const& book)
+{
+    os
+    << R"( 
+  ____                 _      _          __       
+ |  _ \               | |    (_)        / _|      
+ | |_) |  ___    ___  | | __  _  _ __  | |_  ___  
+ |  _ <  / _ \  / _ \ | |/ / | || '_ \ |  _|/ _ \ 
+ | |_) || (_) || (_) ||   <  | || | | || | | (_) |
+ |____/  \___/  \___/ |_|\_\ |_||_| |_||_|  \___/ "
+    )"<< "\n" 
+    << "Title : " << book.getTitle() << "\n" 
+    << "Author : " << book.getAuthor() << "\n"
+    << "Date : " << book.getDate() << "\n"
+    << "ISBN : " << book.getISBN() << "\n"
+    << "Language : " << book.getLanguage() << "\n"
+    << "Type : " << book.getType() << std::endl;
+
+    return os;
+ }

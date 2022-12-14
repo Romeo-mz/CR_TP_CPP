@@ -39,3 +39,21 @@ void Author::updateSurname(std::string surname){
 std::string authorInfo(Author a){
     return a.getName() + " " + a.getSurname();
 }
+
+std::ostream& operator<<(std::ostream& os, Author const& author)
+{
+    os <<
+    R"(
+                  _    _                    _          __       
+     /\          | |  | |                  (_)        / _|      
+    /  \   _   _ | |_ | |__    ___   _ __   _  _ __  | |_  ___  
+   / /\ \ | | | || __|| '_ \  / _ \ | '__| | || '_ \ |  _|/ _ \ 
+  / ____ \| |_| || |_ | | | || (_) || |    | || | | || | | (_) |
+ /_/    \_\\__,_| \__||_| |_| \___/ |_|    |_||_| |_||_|  \___/ 
+                                                                
+    )"
+    << "Name : " << author.getName() << ", Surname : " << author.getSurname() << ", Date of birth " << author.getDate() << "\n"
+    << "Id : " << author.getID() << std::endl;
+
+    return os;
+}
