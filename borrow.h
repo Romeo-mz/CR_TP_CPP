@@ -3,6 +3,7 @@
 #include "date.h"
 #include "reader.h"
 #include "book.h"
+#include "biblio.h"
 #include <vector>
 
 class Borrow
@@ -13,6 +14,7 @@ class Borrow
     
     void addReader();
     void addBook(Book& book);
+
 
     void returnBook(Book& book);
     

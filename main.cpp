@@ -34,8 +34,8 @@ int main()
     Reader r3("Ptit", "Louis", 3);
     Reader r4 ("Maxence", "Contant", 4);
 
-    Book b1("Theories of Subquantum Computing", a1, "EN", "Computing Sciences", db1, "0001", false);
-    Book b2("Why AI is cooler than Humans (or not)", a1, "EN", "Computing Sciences", db2, "0002", false);
+    Book b1("Theories of Subquantum Computing", a1, "EN", "Computer Science", db1, "0001", false);
+    Book b2("Why AI is cooler than Humans (or not)", a1, "EN", "Computer Science", db2, "0002", false);
     Book b3("Contes du Petit Papa Noël", a2, "FR", "Children", db3, "0011", false);
     Book b4("Pokémon: Ultimate", a2, "FR", "Adventure", db4, "0012", false);
     Book b5("Pokémon: Next Generation", a2, "FR", "Adventure", db5, "0013", false);
@@ -44,14 +44,20 @@ int main()
     Book b8("The Cosmic Knight: The Sword of Destiny", a3, "EN", "Sci-Fantasy", db8, "0022", false);
     Book b9("The Cosmic Knight: The Dead King", a3, "EN", "Sci-Fantasy", db9, "0023", false);
     Book b10("The Cosmic Knight: The Last War", a3, "EN", "Sci-Fantasy", db10, "0024", false);
-    Book b11("Die Grundlagen von C++", a4, "DE", "Computing Sciences", db11, "0031", false);
-    Book b12("Wie man ein Programmierprofi wird", a4, "DE", "Computing Sciences", db12, "0032", false);
+    Book b11("Die Grundlagen von C++", a4, "DE", "Computer Science", db11, "0031", false);
+    Book b12("Wie man ein Programmierprofi wird", a4, "DE", "Computer Science", db12, "0032", false);
 
     ///////////////////////////////
 
     Biblio bib;
     bib.addList(b1);
-    //biblioBook();
+    bib.addList(b2);
+    bib.addList(b4);
+    bib.addList(b11);
+    bib.biblioBook();
+    bib.addAuthors(a1);
+    bib.addAuthors(a2);
+    bib.biblioAuthor();
 
 
 

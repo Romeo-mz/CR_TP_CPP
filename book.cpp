@@ -68,11 +68,11 @@ std::ostream& operator<< (std::ostream& os, Book const& book)
  | |_) |  ___    ___  | | __  _  _ __  | |_  ___  
  |  _ <  / _ \  / _ \ | |/ / | || '_ \ |  _|/ _ \ 
  | |_) || (_) || (_) ||   <  | || | | || | | (_) |
- |____/  \___/  \___/ |_|\_\ |_||_| |_||_|  \___/ "
+ |____/  \___/  \___/ |_|\_\ |_||_| |_||_|  \___/ 
     )"<< "\n" 
     << "Title : " << book.getTitle() << "\n" 
     << "Author : " << book.getAuthor() << "\n"
-    << "Date : " << book.getDate() << "\n"
+    << "Publishing Date : " << book.getDate() << "\n"
     << "ISBN : " << book.getISBN() << "\n"
     << "Language : " << book.getLanguage() << "\n"
     << "Type : " << book.getType() << std::endl;

@@ -10,12 +10,15 @@
 class Biblio {
     public:
         Biblio();
-        void addList(Book b);
-        void borrowedBook(Book b); 
+        void addList(Book b); 
         void biblioBook();
+        void addAuthors(Author a); 
+        void biblioAuthor();
 
     private:
     std::vector<Book> books;
+    std::vector<Author> authors;
     Book b();
+    Author a();
 };
 

@@ -51,8 +51,9 @@ std::ostream& operator<<(std::ostream& os, Author const& author)
   / ____ \| |_| || |_ | | | || (_) || |    | || | | || | | (_) |
  /_/    \_\\__,_| \__||_| |_| \___/ |_|    |_||_| |_||_|  \___/ 
                                                                 
-    )"
-    << "Name : " << author.getName() << ", Surname : " << author.getSurname() << ", Date of birth " << author.getDate() << "\n"
+    )" << "\n"
+    << "Name : " << author.getName() << " " << author.getSurname() << "\n" 
+    << "Birth Date : " << author.getDate() << "\n"
     << "Id : " << author.getID() << std::endl;
 
     return os;

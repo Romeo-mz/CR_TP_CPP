@@ -1,6 +1,7 @@
 #include "borrow.h"
 #include "date.h"
 #include "book.h"
+#include "biblio.h"
 #include <assert.h> 
 #include <iostream>
 
@@ -57,3 +58,4 @@ bool Borrow::isBorrow(Book& book)
     }
     
 }
+
