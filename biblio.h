@@ -10,14 +10,20 @@
 class Biblio {
     public:
         Biblio();
-        void addList(Book b); 
-        void biblioBook();
+        void addBook(Book b); 
+        void biblioBook() const;
         void addAuthors(Author a); 
-        void biblioAuthor();
+        void biblioAuthor() const;
+
+        std::vector<Book> findBookAuthor(std::string name = "Default");
+
+        void printBookAuthor() const;
 
     private:
-    std::vector<Book> books;
-    std::vector<Author> authors;
+    std::vector<Book> _books;
+    std::vector<Author> _authors;
+
+    std::vector<Book> _bookAuthor;
     Book b();
     Author a();
 };

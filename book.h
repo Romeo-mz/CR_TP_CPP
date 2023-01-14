@@ -10,6 +10,7 @@ class Book {
         Date d = Date(), std::string ISBN = "0000", bool isBorrowed = false);
         std::string getTitle() const;
         std::string getAuthor() const;
+        std::string getNameAuthor() const;
         std::string getLanguage() const;
         std::string getType() const;
         std::string getDate() const;

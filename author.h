@@ -5,7 +5,7 @@
 
 class Author {
     public: 
-        Author(int id = 0, std::string name = "Name", std::string surname = "Surname", Date d = Date());
+        Author(int id = 0, std::string surname = "Surname", std::string name = "Name", Date d = Date());
         int getID() const;
         std::string getName() const;
         std::string getSurname() const;

@@ -1,6 +1,7 @@
 #include "reader.h"
 #include <iostream>
 
+//Création du constructeur
 Reader::Reader(const std::string name, const std::string surname, const int id): _name(name), _surname(surname), _id(id)
 {
 
@@ -40,6 +41,7 @@ void Reader::printReader() const
     std::cout  << "Name : " << getName() << "\nSurname : " << getSurname() << "\nId : " << getId() << std::endl;
 }
 
+//Surcharge de l'opérateur << pour afficher les infos du lecteur
 std::ostream& operator<< (std::ostream& os, Reader const& reader)
 {
    os 

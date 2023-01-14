@@ -98,7 +98,7 @@ int getDaysInMonth(int month)  {
     return 30;
 }
 
-//Helper permettant de ????
+//Helper permettant de renvoyer le nombre de jours dans l'année
 int dayOfYear(Date d) {
     auto day=0;
     for (auto i=1;i<d.month();i++) {

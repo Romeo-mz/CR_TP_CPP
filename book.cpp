@@ -19,6 +19,10 @@ std::string Book::getAuthor() const {
     return authorInfo(_a);
 }
 
+std::string Book::getNameAuthor() const
+{
+    return _a.getName();
+}
 //Méthode permettant de récupérer le langage du livre
 std::string Book::getLanguage() const {
     return _language;
@@ -59,6 +63,7 @@ void bookDisplay(Book b){
     << b.getISBN() << ". \n";
 }
 
+//Surcharge de l'opérateur << pour afficher les informations du livre
 std::ostream& operator<< (std::ostream& os, Book const& book)
 {
     os

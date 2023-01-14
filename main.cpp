@@ -8,6 +8,8 @@
 
 int main()
 {
+    //Création de différentes dates à l'aide de la classe Date
+
     Date da1(2002, 6, 6);
     Date da2(2002, 4, 25);
     Date da3(1987, 12, 25);
@@ -25,6 +27,8 @@ int main()
     Date db11(2011, 11, 11);
     Date db12(2020, 2, 14);
 
+    //Création de différents auteurs à l'aide de la classe Author
+
     Author a1(1, "Nolane", "Delille", da1);
     Author a2(2, "Adil", "Amoura", da2);
     Author a3(3, "Bobby", "Bob", da3);
@@ -33,6 +37,8 @@ int main()
     Reader r2("Emmanuel", "Macron", 2);
     Reader r3("Ptit", "Louis", 3);
     Reader r4 ("Maxence", "Contant", 4);
+
+    //Création de différents livres à l'aide de la classe Book
 
     Book b1("Theories of Subquantum Computing", a1, "EN", "Computer Science", db1, "0001", false);
     Book b2("Why AI is cooler than Humans (or not)", a1, "EN", "Computer Science", db2, "0002", false);
@@ -49,16 +55,33 @@ int main()
 
     ///////////////////////////////
 
+    //Création de la bibliothèque et manipulation de celle-ci
+
     Biblio bib;
-    bib.addList(b1);
-    bib.addList(b2);
-    bib.addList(b4);
-    bib.addList(b11);
+
+    //Ajout des différents livres dans la bibliothèque
+
+    bib.addBook(b1);
+    bib.addBook(b2);
+    bib.addBook(b4);
+    bib.addBook(b11);
+
+    //Affichage des différents livres ajoutés dans la bibliothèque
+
     bib.biblioBook();
+
+    //Ajout des différents auteurs dans la bibliothèque
+
     bib.addAuthors(a1);
     bib.addAuthors(a2);
+    
+    //Affichage des différents auteurs dans la bibliothèque
+
     bib.biblioAuthor();
 
+    //Cherche et affiche les livres fait par Nolane
+    bib.findBookAuthor("Delille");
+    bib.printBookAuthor();
 
 
 

@@ -3,31 +3,37 @@
 #include "date.h"
 #include <string>
 
-
-Author::Author(int id, std::string name, std::string surname, Date d) :
+//Création du constructeur
+Author::Author(int id,  std::string surname, std::string name, Date d) :
     _id(id), _name(name), _surname(surname), _d(d) {
 }
 
+//Méthode pour obtenir l'id de l'auteur
 int Author::getID() const {
     return _id;
 }
 
+//Méthode pour obtenir le nom de l'auteur
 std::string Author::getName() const {
     return _name;
 }
 
+//Méthode pour obtenir le prénom de l'auteur
 std::string Author::getSurname() const {
     return _surname;
 }
 
+//Méthode pour obtenir la date de naissance de l'auteur
 std::string Author::getDate() const {
     return toString(_d);
 }
 
+//Méthode pour définir le nom
 void Author::updateName(std::string name){
     _name = name;
 }
 
+//Méthode pour définir le prénom
 void Author::updateSurname(std::string surname){
     _surname = surname;
 }
@@ -36,10 +42,12 @@ void Author::updateSurname(std::string surname){
 
 // HELPER
 
+//Helper pour renvoyer le nom et prénom de l'auteur
 std::string authorInfo(Author a){
     return a.getName() + " " + a.getSurname();
 }
 
+//Surcharge de l'opérateur << pour afficher les informations de l'auteur
 std::ostream& operator<<(std::ostream& os, Author const& author)
 {
     os <<
