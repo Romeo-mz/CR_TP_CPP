@@ -29,7 +29,6 @@ class Biblio
     
     std::vector<Book> _bookAuthor;
 
-    float _percentage;
 
 };
 

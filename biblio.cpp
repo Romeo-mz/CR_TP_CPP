@@ -69,12 +69,13 @@ void Biblio::findBorrow(Borrow& borrow)
 
 void Biblio::printBorrow()
 {
+    double percentage;
 
     for(int i = 0; i < _borrows.size() ; i++)
     {
         std::cout << _borrows[i] << std::endl;
     }
-    _percentage = ( (_borrows.size() - 1 ) / (_books.size() ))*100;
-    std::cout << _percentage << std::endl;
-    std::cout << "There is : " << _percentage << " % books borrowed" << std::endl;
+    percentage = ( double(_borrows.size() - 1 ) / double(_books.size() ))*100;
+    std::cout << (_borrows.size()) << std::endl;
+    std::cout << "There is : " << percentage << " % books borrowed" << std::endl;
 }
