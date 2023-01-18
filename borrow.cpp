@@ -69,3 +69,8 @@ bool Borrow::isBorrow(Book& book) const
     
 }
 
+//Renvoie la liste des identifiants des livres empruntés
+std::vector<std::string> Borrow::getIsbnlist()
+{
+    return _isbnList;
+}

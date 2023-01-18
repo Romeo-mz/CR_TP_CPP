@@ -5,7 +5,8 @@
 #include <string>
 #include <iostream>
 
-class Biblio {
+class Biblio 
+{
     public:
         Biblio();
         void addBook(Book b); 
@@ -14,17 +15,21 @@ class Biblio {
         void biblioAuthor() const;
 
         std::vector<Book> findBookAuthor(std::string name = "Default");
-        std::vector<Borrow> findBorrow();
+        void findBorrow(Borrow& borrow);
+
         void printBookAuthor() const;
+        void printBorrow();
 
     private:
     std::vector<Book> _books;
 
     std::vector<Author> _authors;
 
-    std::vector<Borrow> _borrows;
+    std::vector<std::string> _borrows;
     
     std::vector<Book> _bookAuthor;
+
+    float _percentage;
 
 };
 

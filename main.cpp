@@ -85,7 +85,10 @@ int main()
 
     //Ajout des différents emprunts dans la bibliothèque
     Borrow borrow1(r1,b1,da1);
-    
+    borrow1.addBook(b1);
+    borrow1.addBook(b2);
+    bib.findBorrow(borrow1);
+    bib.printBorrow();
 
 
     return 0;

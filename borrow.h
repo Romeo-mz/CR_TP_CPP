@@ -15,7 +15,7 @@ class Borrow
 
 
     void returnBook(Book& book);
-    
+    std::vector<std::string> getIsbnlist();
     void printBorrow(const Reader& reader) const;
 
     bool isBorrow(Book& book) const;

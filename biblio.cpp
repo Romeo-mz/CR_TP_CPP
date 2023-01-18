@@ -61,8 +61,20 @@ void Biblio::printBookAuthor() const
     }
 }
 
-//Méthode qui permet de chercher l'ensemble des livres empruntés
-std::vector<Borrow> Biblio::findBorrow()
+//Méthode qui permet d'ajouter l'ensemble des livres empruntés
+void Biblio::findBorrow(Borrow& borrow)
 {
-    
+    _borrows = borrow.getIsbnlist(); 
+}
+
+void Biblio::printBorrow()
+{
+
+    for(int i = 0; i < _borrows.size() ; i++)
+    {
+        std::cout << _borrows[i] << std::endl;
+    }
+    _percentage = ( (_borrows.size() - 1 ) / (_books.size() ))*100;
+    std::cout << _percentage << std::endl;
+    std::cout << "There is : " << _percentage << " % books borrowed" << std::endl;
 }
