@@ -16,7 +16,7 @@ class Biblio
 
         std::vector<Book> findBookAuthor(std::string name = "Default");
         void findBorrow(Borrow& borrow);
-
+        
         void printBookAuthor() const;
         void printBorrow();
 

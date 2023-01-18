@@ -67,6 +67,7 @@ void Biblio::findBorrow(Borrow& borrow)
     _borrows = borrow.getIsbnlist(); 
 }
 
+//Méthode qui permet d'afficher les emprunts ainsi que le pourcentage des emprunts
 void Biblio::printBorrow()
 {
     double percentage;
