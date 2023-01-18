@@ -1,9 +1,7 @@
-#ifndef BORROW_H
-#define BORROW_H
+#pragma once
 #include "date.h"
 #include "reader.h"
 #include "book.h"
-#include "biblio.h"
 #include <vector>
 
 class Borrow
@@ -12,15 +10,15 @@ class Borrow
 
     Borrow(const Reader& reader, Book& book, Date date = Date());
     
-    void addReader();
+    void addReader(); 
     void addBook(Book& book);
 
 
     void returnBook(Book& book);
     
-    void printBorrow(const Reader& reader);
+    void printBorrow(const Reader& reader) const;
 
-    bool isBorrow(Book& book);
+    bool isBorrow(Book& book) const;
 
     private:
 
@@ -33,6 +31,3 @@ class Borrow
     std::vector <std::string> _isbnList;
     
 };
-
-
-#endif

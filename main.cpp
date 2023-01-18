@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include "author.h"
 #include "date.h"
 #include "reader.h"
 #include "book.h"
@@ -83,6 +83,9 @@ int main()
     bib.findBookAuthor("Delille");
     bib.printBookAuthor();
 
+    //Ajout des différents emprunts dans la bibliothèque
+    Borrow borrow1(r1,b1,da1);
+    
 
 
     return 0;

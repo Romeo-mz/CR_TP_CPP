@@ -1,7 +1,5 @@
 #pragma once
 #include "book.h"
-#include "date.h"
-#include "reader.h"
 #include "borrow.h"
 #include <vector>
 #include <string>
@@ -16,15 +14,17 @@ class Biblio {
         void biblioAuthor() const;
 
         std::vector<Book> findBookAuthor(std::string name = "Default");
-
+        std::vector<Borrow> findBorrow();
         void printBookAuthor() const;
 
     private:
     std::vector<Book> _books;
+
     std::vector<Author> _authors;
 
+    std::vector<Borrow> _borrows;
+    
     std::vector<Book> _bookAuthor;
-    Book b();
-    Author a();
+
 };
 

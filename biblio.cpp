@@ -1,9 +1,4 @@
-#pragma once
 #include "biblio.h"
-#include "book.h"
-#include "date.h"
-#include "reader.h"
-#include "borrow.h"
 #include <vector>
 #include <string>
 #include <iostream>
@@ -42,6 +37,7 @@ void Biblio::biblioAuthor() const
     std::cout << "\n";
 }
 
+//Méthode qui cherche les livres appartenant aux auteurs
 std::vector<Book> Biblio::findBookAuthor(std::string name)
 {
     
@@ -55,6 +51,7 @@ std::vector<Book> Biblio::findBookAuthor(std::string name)
     return _bookAuthor;
 }
 
+//Méthode qui affiche les livres
 void Biblio::printBookAuthor() const
 {
 
@@ -62,4 +59,10 @@ void Biblio::printBookAuthor() const
     {
         std::cout << _bookAuthor[i] << std::endl;
     }
+}
+
+//Méthode qui permet de chercher l'ensemble des livres empruntés
+std::vector<Borrow> Biblio::findBorrow()
+{
+    
 }

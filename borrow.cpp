@@ -2,12 +2,13 @@
 #include "date.h"
 #include "book.h"
 #include "biblio.h"
+#include <algorithm>
 #include <assert.h> 
 #include <iostream>
 
 //Constructeur qui increment l'index pour chaque nouveau reader
 
-Borrow::Borrow(const Reader& reader, Book& book, Date date): _date(date), _book(book), _reader(reader)
+Borrow::Borrow(const Reader& reader, Book& book, Date date): _date(date), _book(book), _reader(reader) 
 {   
  
     bool status = isBorrow(book);
@@ -31,14 +32,23 @@ void Borrow::addBook(Book& book)
     book.setIsBorrowed(true);
 }
 
-//Cherche dans la liste des emprunts si le livre est emprunté ou non
+//Méthode qui permet de mettre l'identifiant d'emprunt à false pour le retour d'un livre
 void Borrow::returnBook(Book& book)
 {
     book.setIsBorrowed(false);
+    for(int i = 0; i < _isbnList.size(); i++ )
+    {   
+        if(std::find(_isbnList.begin(), _isbnList.end(), book.getISBN() ) != _isbnList.end() )
+        {
+            _isbnList.erase(_isbnList.begin() + i );
+
+        }
+
+    }
 }
 
 //Affiche le livre emprunté par le lecteur
-void Borrow::printBorrow(const Reader& reader)
+void Borrow::printBorrow(const Reader& reader) const
 {
     std::cout << "M : " << reader.getSurname() << " " << reader.getName() << " with Id " << _idList.at(_index) <<
     " has borrowed " << _book.getTitle() << " the " << toString(_date) << std::endl;
@@ -46,7 +56,7 @@ void Borrow::printBorrow(const Reader& reader)
 }
 
 //Test si l'identifiant du livre a emprunté est dans la list des emprunts
-bool Borrow::isBorrow(Book& book)
+bool Borrow::isBorrow(Book& book) const
 {
     if(book.getIsBorrowed() == false)
     {

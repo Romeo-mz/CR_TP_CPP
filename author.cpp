@@ -1,4 +1,3 @@
-#pragma once
 #include "author.h"
 #include "date.h"
 #include <string>
