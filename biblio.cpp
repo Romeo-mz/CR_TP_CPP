@@ -37,6 +37,17 @@ void Biblio::biblioAuthor() const
     std::cout << "\n";
 }
 
+void Biblio::addReader(Reader r) {
+    _readers.push_back(r);
+}
+
+void Biblio::biblioReader() const {
+    for (int i = 0; i < _readers.size(); i++){
+        std::cout << _readers[i] << "\t";
+    }
+    std::cout << "\n";
+}
+
 //Méthode qui cherche les livres appartenant aux auteurs
 std::vector<Book> Biblio::findBookAuthor(std::string name)
 {

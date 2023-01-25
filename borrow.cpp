@@ -52,7 +52,6 @@ void Borrow::printBorrow(const Reader& reader) const
 {
     std::cout << "M : " << reader.getSurname() << " " << reader.getName() << " with Id " << _idList.at(_index) <<
     " has borrowed " << _book.getTitle() << " the " << toString(_date) << std::endl;
-
 }
 
 //Test si l'identifiant du livre a emprunté est dans la list des emprunts
@@ -66,7 +65,6 @@ bool Borrow::isBorrow(Book& book) const
     {
         return false;
     }
-    
 }
 
 //Renvoie la liste des identifiants des livres empruntés

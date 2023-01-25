@@ -13,6 +13,8 @@ class Biblio
         void biblioBook() const;
         void addAuthors(Author a); 
         void biblioAuthor() const;
+        void addReader(Reader r);
+        void biblioReader() const;
 
         std::vector<Book> findBookAuthor(std::string name = "Default");
         void findBorrow(Borrow& borrow);
@@ -28,6 +30,8 @@ class Biblio
     std::vector<std::string> _borrows;
     
     std::vector<Book> _bookAuthor;
+
+    std::vector<Reader> _readers;
 
 
 };

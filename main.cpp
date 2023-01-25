@@ -66,6 +66,11 @@ int main()
     bib.addBook(b4);
     bib.addBook(b11);
 
+    // Ajout des différents lecteurs de la Bibliothèque
+    bib.addReader(r1);
+    bib.addReader(r2);
+    bib.addReader(r3);
+
     //Affichage des différents livres ajoutés dans la bibliothèque
 
     bib.biblioBook();
@@ -89,6 +94,8 @@ int main()
     borrow1.addBook(b2);
     bib.findBorrow(borrow1);
     bib.printBorrow();
+    bib.biblioReader();
+
 
 
     return 0;
