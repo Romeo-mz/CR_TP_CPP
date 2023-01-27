@@ -14,4 +14,4 @@ Il y a aussi des fonctionnalités pour permettre un affichage graphique plus agr
 
 #Compte rendu
 
-Vous trouverez les comptes rendus de nos TP ![ici]('https://github.com/Romeo-mz/CR_TP_CPP/tree/main/CR').
+Vous trouverez les comptes rendus de nos TP dans le dossier CR.
