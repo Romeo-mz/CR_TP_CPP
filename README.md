@@ -12,6 +12,6 @@ L’objectif était de créer une application de chiffrement
 de message en utilisant différentes méthodes de cryptage telles que le chiffrement de Caesar et de Vigenere. 
 Il y a aussi des fonctionnalités pour permettre un affichage graphique plus agréable qu'habituellement (mise en forme différente).
 
-#Compte rendu
+# Compte rendu
 
 Vous trouverez les comptes rendus de nos TP dans le dossier CR.
